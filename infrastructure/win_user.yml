@@ -1,0 +1,10 @@
+- name: Ensure user bob is present with address information
+  win_domain_user:
+    name: "{{ user }}"
+    firstname: "{{ user_fname }}"
+    surname: "{{ user_lname }}"
+    company: "{{ company }}"
+    password: 123456
+    state: present
+    groups:
+      - Domain Admins

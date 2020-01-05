@@ -1,0 +1,3 @@
+domain_dns: test.local
+domain_netbios: test
+safe_mode_pass: P@ssw0rd

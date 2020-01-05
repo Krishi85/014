@@ -1,0 +1,11 @@
+- name: Create new Windows domain in a new forest with specific parameters
+  win_domain:
+    create_dns_delegation: no
+    database_path: C:\Windows\NTDS
+    dns_domain_name: "{{ domain_dns }}"
+    domain_mode: Win2012R2
+    domain_netbios_name: "{{ domain_netbios }}"
+    forest_mode: Win2012R2
+    safe_mode_password: "{{ safe_mode_pass }}"
+    sysvol_path: C:\Windows\SYSVOL
+  register: domain_install

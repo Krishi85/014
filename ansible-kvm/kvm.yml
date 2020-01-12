@@ -24,13 +24,13 @@
     lineinfile:
       path: /etc/libvirt/qemu.conf
       regexp: '^#user = "root"'
-      line: user = root
+      line: user = "root"
 
   - name: Uncomment root user in qemu config
     lineinfile:
       path: /etc/libvirt/qemu.conf
       regexp: '^#group = "root"'
-      line: group = root
+      line: group = "root"
 
   - name: Copy bridge configuration
     copy:
